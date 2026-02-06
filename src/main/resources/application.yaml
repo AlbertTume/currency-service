@@ -1,3 +1,23 @@
+server:
+  servlet:
+    context-path: /api/v1
+
 spring:
   application:
     name: currency-service
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format-sql: true
+      open-in-view: false
+
+services:
+  country-service:
+    url: http://localhost:8081
+    base-path: /api/v1
+
+logging:
+  level:
+    com.service.currency_service: DEBUG
+    org.springframework.web: INFO

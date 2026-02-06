@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Metadatos MacOS ###
+._*
+
+### ENVIROMENTS ###
+*.env

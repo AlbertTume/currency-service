@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5433/db_currencies
+    username: currencies_user
+    password: currenciesPass456!
+
+services:
+  country-service:
+    url: http://country-service:8081
+
+logging:
+  level:
+    com.service.currency_service: INFO
